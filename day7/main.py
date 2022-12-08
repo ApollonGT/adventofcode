@@ -1,8 +1,3 @@
-# import json
-import pprint
-pp = pprint.PrettyPrinter(depth=4)
-
-
 class Structure:
     def __init__(self):
         self.files = {
@@ -15,9 +10,6 @@ class Structure:
         self.current_location = self.files
 
     def __repr__(self):
-        # pp.pprint(self.files)
-        # print(json.dumps(self.files))
-
         print(f"{self.files['path']}: {self.files['size']}")
         self.print_children(self.files, 2)
         return f"Total: {self.files['size']}"
